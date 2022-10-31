@@ -37,6 +37,22 @@
         <item name="hintTextColor">@color/light_grey</item>
     </style>
 
+    <style name="CounterEditText">
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:translationY">-0.74sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="AboutText">
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:translationY">-0.74sp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
     <style name="RoundedCorner">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>

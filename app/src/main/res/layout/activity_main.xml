@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context="com.example.internshipsfera.MainActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
@@ -21,10 +21,11 @@
                 android:id="@+id/avatar"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="80dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="80dp"
+                android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/roundedImageView"
                 app:srcCompat="@drawable/avatar" />
 
@@ -32,57 +33,39 @@
                 android:id="@+id/rate"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="192dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/avatar"
+                app:layout_constraintStart_toStartOf="@id/avatar"
                 app:shapeAppearanceOverlay="@style/roundedImageView"
                 app:srcCompat="@drawable/rate" />
 
             <TextView
                 android:id="@+id/tv_rate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:text="@string/f_4_7"
                 android:fontFamily="@font/inter"
                 android:textColor="@color/contents"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="@+id/rate"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/rate"
                 app:layout_constraintStart_toStartOf="@+id/rate"
-                app:layout_constraintTop_toTopOf="@+id/rate" />
+                />
 
             <TextView
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/inter"
-                android:gravity="center_horizontal"
+                android:gravity="center"
                 android:text="@string/alise_peterson"
                 android:textColor="@color/contents"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/avatar" />
-
-            <TextView
-                android:id="@+id/tv_languages"
-                android:layout_width="230dp"
-                android:layout_height="18dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/inter"
-                android:gravity="center_horizontal|start"
-                android:text="@string/languages"
-                android:textColor="@color/contents"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
             <ImageView
                 android:id="@+id/ic_world"
@@ -96,67 +79,85 @@
                 tools:ignore="ContentDescription" />
 
             <TextView
+                android:id="@+id/tv_languages"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ic_world"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                app:layout_constraintEnd_toStartOf="@id/tv_choose"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center|start"
+                android:text="@string/languages"
+                android:textColor="@color/contents"
+                android:textSize="14sp"/>
+
+            <TextView
                 android:id="@+id/tv_choose"
                 style="@style/Choose"
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
-                android:layout_marginStart="294dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                android:layout_marginEnd="16dp"
                 android:layout_marginTop="12dp"
                 android:gravity="center_horizontal"
-                android:text="@string/choose"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                android:text="@string/choose"/>
 
             <ImageView
                 android:id="@+id/ic_place"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ic_world"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
                 app:srcCompat="@drawable/place"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription"/>
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/ic_place"
+                app:layout_constraintTop_toBottomOf="@+id/tv_languages"
+                app:layout_constraintEnd_toStartOf="@id/tv_choose_second"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center|start"
+                android:text="@string/address"
+                android:textColor="@color/contents"
+                android:textSize="14sp"/>
 
             <TextView
                 android:id="@+id/tv_choose_second"
                 style="@style/Choose"
                 android:layout_width="wrap_content"
                 android:layout_height="18dp"
-                android:layout_marginStart="294dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
                 android:layout_marginTop="54dp"
                 android:gravity="center_horizontal"
-                android:text="@string/choose"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
-
-            <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="230dp"
-                android:layout_height="18dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginTop="24dp"
-                android:fontFamily="@font/inter"
-                android:gravity="center_horizontal|start"
-                android:text="@string/address"
-                android:textColor="@color/contents"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_languages" />
+                android:text="@string/choose"/>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rc_four_top"
+                android:id="@+id/rc_first"
                 android:layout_width="match_parent"
                 android:layout_height="105dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="372dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintDimensionRatio="3:1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="SpeakableTextPresentCheck"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_first_line" />
@@ -164,25 +165,29 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_quest"
                 style="@style/Button"
-                android:layout_width="160dp"
-                android:layout_height="36dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rc_first"
+                app:layout_constraintEnd_toStartOf="@id/btn_people"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
+                android:layout_marginEnd="4dp"
                 android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rc_four_top"
                 android:text="@string/questionnaires" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_people"
                 style="@style/Button"
-                android:layout_width="160dp"
-                android:layout_height="36dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/btn_quest"
+                app:layout_constraintTop_toBottomOf="@+id/rc_first"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginStart="184dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rc_four_top"
                 android:text="@string/people" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -190,24 +195,38 @@
                 style="@style/InputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_quest"
+                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:hint="@string/about_me"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_quest">
+                app:hintTextAppearance="@style/AboutText"
+                android:textColorHint="@color/edit_text"
+                app:boxStrokeColor="@color/edit_text"
+                app:counterEnabled="true"
+                app:counterMaxLength="300"
+                app:counterTextAppearance="@style/CounterEditText"
+                app:counterTextColor="@color/edit_text"
+                app:hintTextColor="@color/edit_text"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/background"
                     android:fontFamily="@font/inter"
+                    android:inputType="textMultiLine"
+                    android:textAppearance="@style/AboutText"
                     android:maxLength="300"
+                    android:lineHeight="24dp"
+                    android:maxLines="2"
                     android:paddingStart="0dp"
                     android:paddingEnd="0dp"
                     android:text="@string/large_text"
                     android:textColor="@color/contents"
+                    android:textColorLink="@color/edit_text"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -222,81 +241,82 @@
                 android:fontFamily="@font/inter"
                 android:text="@string/dream_and_get"
                 android:textColor="@color/contents"
-                android:textSize="20sp"/>
+                android:textSize="16sp"/>
 
             <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:layout_marginStart="310dp"
-                android:layout_marginTop="4dp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="4dp"
                 android:checked="true"
                 android:enabled="true"
                 app:thumbTint="#9575CD"
-                tools:ignore="UseSwitchCompatOrMaterialXml" />
+                tools:ignore="UseSwitchCompatOrMaterialXml"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_wishes"
                 style="@style/Button"
-                android:layout_width="328dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:text="@string/wishes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_dream" />
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_dream"
+                android:text="@string/wishes"/>
 
             <TextView
                 android:id="@+id/tv_moments"
                 style="@style/RcText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/moments"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_wishes" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_wishes"
+                android:layout_marginStart="16dp"
+                android:text="@string/moments"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rc_moments"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_moments"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintDimensionRatio="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_moments"
-                tools:itemCount="5"
-                tools:listitem="@layout/item_moments" />
+                app:layout_constraintDimensionRatio="3:1"
+                android:overScrollMode="never"
+                tools:itemCount="6"
+                tools:listitem="@layout/item_moments"/>
 
             <TextView
                 android:id="@+id/tv_chronic"
                 style="@style/RcText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="@string/chronicles"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rc_moments" />
+                app:layout_constraintTop_toBottomOf="@+id/rc_moments"
+                android:layout_marginStart="16dp"
+                android:text="@string/chronicles"/>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_chronicles"
+                android:id="@+id/rc_chronicles"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="32dp"
-                android:orientation="vertical"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_chronic"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:spanCount="3"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="32dp"
+                android:orientation="vertical"
+                app:layout_constraintDimensionRatio="1:1"
                 tools:itemCount="12"
-                tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/item_chronicles" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

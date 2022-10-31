@@ -1,14 +1,20 @@
-<com.google.android.material.imageview.ShapeableImageView
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/roundedImageView"
-    android:layout_width="106dp"
-    android:layout_height="106dp"
-    app:srcCompat="@drawable/chronic_item"
-    app:layout_constraintDimensionRatio="1:1"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:scaleType="centerCrop">
-</com.google.android.material.imageview.ShapeableImageView>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/background"
+    >
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_chronic"
+        android:src="@drawable/chronic_item"
+        style="@style/RoundedCorner"
+        android:layout_width="106dp"
+        android:layout_height="106dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:scaleType="centerCrop"
+        >
+    </com.google.android.material.imageview.ShapeableImageView>
+</androidx.cardview.widget.CardView>

@@ -1,9 +1,9 @@
-package com.example.intershipsfera
+package com.example.internshipsfera.diff
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.intershipsfera.CardImage
+import com.example.internshipsfera.CardImage
 
-class CardImageItemDiffCallBack: DiffUtil.ItemCallback<CardImage>(){
+class MainListDiffCallBack: DiffUtil.ItemCallback<CardImage>(){
     override fun areItemsTheSame(oldItem: CardImage, newItem: CardImage): Boolean {
         return oldItem.id == newItem.id
     }

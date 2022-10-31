@@ -1,4 +1,4 @@
-package com.example.intershipsfera
+package com.example.internshipsfera
 
 data class CardImage(
     val id: Int
