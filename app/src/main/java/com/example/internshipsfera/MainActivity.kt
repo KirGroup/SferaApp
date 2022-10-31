@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         firstAdapter = FirstAdapter()
         val firstRc: RecyclerView = binding.rcFirst
         firstRc.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
