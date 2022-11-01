@@ -156,6 +156,7 @@
                 android:layout_marginTop="372dp"
                 android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                android:overScrollMode="never"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintDimensionRatio="3:1"
                 tools:ignore="SpeakableTextPresentCheck"
@@ -315,8 +316,9 @@
                 android:layout_marginEnd="11dp"
                 android:layout_marginBottom="32dp"
                 android:orientation="vertical"
+                android:overScrollMode="never"
                 app:layout_constraintDimensionRatio="1:1"
                 tools:itemCount="12"
-                tools:listitem="@layout/item_chronicles" />
+                tools:listitem="@layout/item_chronicles"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

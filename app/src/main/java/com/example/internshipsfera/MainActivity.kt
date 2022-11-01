@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         firstAdapter = FirstAdapter()
         val firstRc: RecyclerView = binding.rcFirst
-        firstRc.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL))
         firstRc.adapter = firstAdapter
 
         momentsAdapter = MomentsAdapter()
@@ -34,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         chronicAdapter = ChronicAdapter()
         val chronicRc = binding.rcChronicles
         chronicRc.setLayoutManager(GridLayoutManager(applicationContext, 3))
-
+        chronicRc.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         chronicRc.adapter = chronicAdapter
     }
 }
