@@ -4,7 +4,7 @@
     android:id="@+id/topAppBar"
     android:layout_width="match_parent"
     android:layout_height="56dp"
-    android:background="@color/background">
+    android:background="@color/bar">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_menu"
@@ -25,7 +25,7 @@
         android:textSize="18sp"
         android:gravity="center|start"
         android:text="@string/id"
-        android:textColor="@color/contents"
+        android:textColor="@color/contents87"
         android:translationY="-1.11sp" />
 
     <com.google.android.material.button.MaterialButton
@@ -36,13 +36,13 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/ic_share"
-        android:backgroundTint="@color/contents"
+        android:backgroundTint="@color/contents87"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_down"
         android:background="@drawable/ic_down"
-        android:backgroundTint="@color/contents"
+        android:backgroundTint="@color/contents87"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"

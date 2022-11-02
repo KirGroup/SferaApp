@@ -9,12 +9,12 @@
     <color name="white">#FFFFFFFF</color>
 
 
+    <color name="bar">#1A000000</color>
     <color name="outline">#9575CD</color>
     <color name="background">#121212</color>
     <color name="grey">#29FFFFFF</color>
-    <color name="contents">#DEFFFFFF</color>
-    <color name="mtrl_textinput_default_box_stroke_color">#9AFFFFFF</color>
-    <color name="light_grey">#99FFFFFF</color>
-    <color name="edit_text">#9AFFFFFF</color>
+    <color name="contents87">#DEFFFFFF</color>
+    <color name="light_grey">#9AFFFFFF</color>
+    <color name="bar_friends">#17FFFFFF</color>
 
 </resources>

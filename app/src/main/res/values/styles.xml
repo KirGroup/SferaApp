@@ -2,7 +2,7 @@
 <resources>
 
     <style name="Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:textColor">@color/contents</item>
+        <item name="android:textColor">@color/contents87</item>
         <item name="android:textSize">14sp</item>
         <item name="backgroundTint">@color/grey</item>
         <item name="strokeWidth">1dp</item>
@@ -15,6 +15,15 @@
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/outline</item>
         <item name="android:layout_marginTop">18dp</item>
+    </style>
+
+    <style name="HeadlinesText">
+        <item name="android:textColor">@color/contents87</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:letterSpacing">-0.03</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+
     </style>
 
     <style name="Choose">
@@ -58,4 +67,15 @@
         <item name="cornerSize">4dp</item>
     </style>
 
+    <style name="ButtonText" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/purple_200</item>
+        <item name="backgroundTint">@color/background</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="textAllCaps">false</item>
+        <item name="rippleColor">@color/bar_friends</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
 </resources>

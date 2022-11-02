@@ -4,13 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemFirstLineBinding
-import com.example.internshipsfera.CardImage
-import com.example.internshipsfera.diff.FirstDiffCallBack
+import com.example.internshipsfera.adapters.diff.MainListDiffCallBack
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
-class FirstAdapter: ListAdapterCards <CardImage, FirstAdapter.CardImageItemHolder> (
-    FirstDiffCallBack()
-){
+class FirstAdapter: ListAdapterCards
+<CardImage, FirstAdapter.CardImageItemHolder> (MainListDiffCallBack()){
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardImageItemHolder {
         return CardImageItemHolder(ItemFirstLineBinding.inflate(LayoutInflater.from(parent.context)))
     }
