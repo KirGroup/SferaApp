@@ -18,4 +18,6 @@
     <string name="chronicles">Chronicles</string>
     <string name="moments">Moments</string>
     <string name="edit_text">Edit text</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">Unsubscribe</string>
 </resources>
