@@ -1,15 +1,15 @@
-package com.example.internshipsfera.adapters
+package com.example.internshipsfera.ui.profile.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemChroniclesBinding
-import com.example.internshipsfera.adapters.diff.MainListDiffCallBack
-
+import com.example.internshipsfera.ui.profile.adapters.diff.MainListDiffCallBack
+import com.example.internshipsfera.data.Account
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class ChronicAdapter: ListAdapterCards
-<CardImage, ChronicAdapter.CardImageItemHolder>(MainListDiffCallBack()){
+<Account, ChronicAdapter.CardImageItemHolder>(MainListDiffCallBack()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardImageItemHolder {
         return CardImageItemHolder(ItemChroniclesBinding.inflate(LayoutInflater.from(parent.context)))

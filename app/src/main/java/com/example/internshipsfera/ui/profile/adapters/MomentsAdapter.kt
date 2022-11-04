@@ -1,14 +1,15 @@
-package com.example.internshipsfera.adapters
+package com.example.internshipsfera.ui.profile.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemMomentsBinding
-import com.example.internshipsfera.adapters.diff.MainListDiffCallBack
+import com.example.internshipsfera.ui.profile.adapters.diff.MainListDiffCallBack
+import com.example.internshipsfera.data.Account
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class MomentsAdapter: ListAdapterCards
-<CardImage, MomentsAdapter.CardImageItemHolder> (MainListDiffCallBack()){
+<Account, MomentsAdapter.CardImageItemHolder> (MainListDiffCallBack()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardImageItemHolder {
         return CardImageItemHolder(ItemMomentsBinding.inflate(LayoutInflater.from(parent.context)))
