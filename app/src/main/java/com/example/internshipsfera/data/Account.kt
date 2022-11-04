@@ -5,5 +5,4 @@ data class Account(
     val name: String = "",
     val isSubscribe: Boolean = false,
     val avatarUrl: String = ""
-) {
-}
+)

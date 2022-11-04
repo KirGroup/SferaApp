@@ -1,6 +1,5 @@
 package com.example.internshipsfera.ui.profile
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,12 +23,11 @@ class AccountFragment: Fragment() {
     private lateinit var momentsAdapter: MomentsAdapter
     private lateinit var chronicAdapter: ChronicAdapter
 
-    @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAccountBinding.inflate(inflater, container, false)
 
         firstAdapter = FirstAdapter()
@@ -64,7 +62,7 @@ class AccountFragment: Fragment() {
                 if (focus) {
                     textInputLayout.counterTextColor = getColorStateList(
                         requireContext(),
-                        R.color.purple_200
+                        R.color.outline
                     )
                 } else {
                     textInputLayout.counterTextColor = getColorStateList(

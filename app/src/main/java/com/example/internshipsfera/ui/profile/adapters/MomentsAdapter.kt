@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemMomentsBinding
-import com.example.internshipsfera.ui.profile.adapters.diff.MainListDiffCallBack
+import com.example.internshipsfera.ui.profile.adapters.diff.ProfileListDiffCallBack
 import com.example.internshipsfera.data.Account
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class MomentsAdapter: ListAdapterCards
-<Account, MomentsAdapter.CardImageItemHolder> (MainListDiffCallBack()){
+<Account, MomentsAdapter.CardImageItemHolder> (ProfileListDiffCallBack()){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardImageItemHolder {
         return CardImageItemHolder(ItemMomentsBinding.inflate(LayoutInflater.from(parent.context)))
