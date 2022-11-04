@@ -6,18 +6,18 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.internshipsfera.R
-import com.example.internshipsfera.ui.profile.adapters.diff.MainListDiffCallBack
 import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.ItemFriendsBinding
+import com.example.internshipsfera.ui.friends.adapter.diff.FriendsListDiffCallBack
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class FriendsAdapter(private val context: Context): ListAdapterCards
-<Account, FriendsAdapter.CardFriendItemHolder>(MainListDiffCallBack()){
+<Account, FriendsAdapter.CardFriendItemHolder>(FriendsListDiffCallBack()){
 
     open class CardFriendItemHolder(val binding: ItemFriendsBinding) :
     RecyclerView.ViewHolder(binding.root)
 
-    private val differ = AsyncListDiffer(this, MainListDiffCallBack())
+    private val differ = AsyncListDiffer(this, FriendsListDiffCallBack())
 
     var accountList: List<Account>
         get() = differ.currentList

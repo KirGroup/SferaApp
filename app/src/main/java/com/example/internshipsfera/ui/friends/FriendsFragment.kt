@@ -22,7 +22,7 @@ class FriendsFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentFriendsBinding.inflate(inflater, container, false)
 
         val rcFriend = binding.rcFriends

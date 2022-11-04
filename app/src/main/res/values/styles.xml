@@ -23,7 +23,6 @@
         <item name="android:textSize">18sp</item>
         <item name="android:letterSpacing">-0.03</item>
         <item name="android:lineSpacingExtra">2sp</item>
-
     </style>
 
     <style name="Choose">
@@ -66,7 +65,7 @@
     </style>
 
     <style name="ButtonText" parent="Widget.MaterialComponents.Button.TextButton">
-        <item name="android:textColor">@color/purple_200</item>
+        <item name="android:textColor">@color/outline</item>
         <item name="backgroundTint">@color/background</item>
         <item name="android:paddingEnd">0dp</item>
         <item name="android:textSize">14sp</item>
@@ -75,6 +74,10 @@
         <item name="textAllCaps">false</item>
         <item name="rippleColor">@color/bar_friends</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Body2</item>
+    </style>
+
+    <style name="ToolBarButton">
+        <item name="backgroundTint">@color/contents87</item>
     </style>
 
 </resources>
