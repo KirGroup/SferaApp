@@ -1,6 +1,7 @@
 package com.example.internshipsfera.domain
 
 import androidx.lifecycle.LiveData
+import com.example.internshipsfera.data.Account
 
 interface AccountListRepository {
 

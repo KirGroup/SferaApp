@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.internshipsfera.R
-import com.example.internshipsfera.domain.Account
+import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.ItemFriendsBinding
 import com.example.internshipsfera.presentation.friends.adapter.diff.FriendsListDiffCallBack
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
@@ -50,8 +50,6 @@ class FriendsAdapter(private val context: Context): ListAdapterCards
 
         holder.btnSubscribe.setOnClickListener {
             onInterfaceItemClickListener?.onFunItemClick(account)
-//            account.isSubscribe = !account.isSubscribe
-//            notifyDataSetChanged()
         }
     }
 

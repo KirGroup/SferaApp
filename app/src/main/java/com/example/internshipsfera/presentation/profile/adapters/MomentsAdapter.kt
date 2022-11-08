@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemMomentsBinding
 import com.example.internshipsfera.presentation.profile.adapters.diff.ProfileListDiffCallBack
-import com.example.internshipsfera.domain.Account
+import com.example.internshipsfera.data.Account
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class MomentsAdapter: ListAdapterCards

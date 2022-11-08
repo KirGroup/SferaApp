@@ -1,4 +1,4 @@
-package com.example.internshipsfera.domain
+package com.example.internshipsfera.data
 
 data class Account(
     val name: String = "",

@@ -2,7 +2,6 @@ package com.example.internshipsfera.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.internshipsfera.domain.Account
 import com.example.internshipsfera.domain.AccountListRepository
 
 object AccountListRepositoryImpl: AccountListRepository {
@@ -10,12 +9,34 @@ object AccountListRepositoryImpl: AccountListRepository {
     private val accountListLD = MutableLiveData<List<Account>>()
     private val accountList = sortedSetOf<Account>({ o1, o2 -> o1.id.compareTo(o2.id) })
 
+    private val fakeList = FakeLinks()
+
     private var autoIncrementedId = 0
 
     init {
+        var counter = 0
         for (i in 0 until 40){
-            val item = Account("Name $i", "ds", false, i)
-            addAccount(item)
+            if (counter < 9) {
+                addAccount(
+                    Account(
+                        id = i,
+                        name = fakeList.faker.name().fullName(),
+                        isSubscribe = false,
+                        avatarUrl = fakeList.photoUrl[counter]
+                    )
+                )
+                counter++
+            } else {
+                addAccount(
+                    Account(
+                        id = i,
+                        name = fakeList.faker.name().fullName(),
+                        isSubscribe = false,
+                        avatarUrl = fakeList.photoUrl[counter]
+                    )
+                )
+                counter = 0
+            }
         }
     }
 
@@ -33,6 +54,7 @@ object AccountListRepositoryImpl: AccountListRepository {
     override fun editAccount(account: Account) {
         accountList.remove(getAccount(account.id))
         accountList.add(account)
+        updateList()
     }
 
     override fun getAccount(accountId: Int): Account {

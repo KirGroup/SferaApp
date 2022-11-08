@@ -1,9 +1,8 @@
 package com.example.internshipsfera.presentation.friends
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.internshipsfera.data.AccountListRepositoryImpl
-import com.example.internshipsfera.domain.Account
+import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.domain.usecase.AddAccountUseCase
 import com.example.internshipsfera.domain.usecase.DeleteAccountUseCase
 import com.example.internshipsfera.domain.usecase.EditAccountUseCase

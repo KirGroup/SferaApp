@@ -1,7 +1,7 @@
 package com.example.internshipsfera.presentation.profile.adapters.diff
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.internshipsfera.domain.Account
+import com.example.internshipsfera.data.Account
 
 class ProfileListDiffCallBack: DiffUtil.ItemCallback<Account>(){
     override fun areItemsTheSame(oldItem: Account, newItem: Account): Boolean {

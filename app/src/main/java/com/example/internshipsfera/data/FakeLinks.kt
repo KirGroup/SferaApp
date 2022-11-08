@@ -1,11 +1,10 @@
-package com.example.internshipsfera.domain
-import com.example.internshipsfera.domain.Account
+package com.example.internshipsfera.data
 import com.github.javafaker.Faker
 
 class FakeLinks {
 
-    private val faker = Faker()
-    private val photoUrl = listOf(
+    val faker = Faker()
+    val photoUrl = listOf(
         "https://sun1-84.userapi.com/s/v1/ig2/4CK1kPleOQmLZaq2DaHgpplVULvx4I7cbuQaxOqcNltA9gsDG3b-5U_Fs4vpEK73buzNG5honnAh7CKby0pX3-7n.jpg?size=200x200&quality=96&crop=139,1,680,680&ava=1",
         "https://avatars.mds.yandex.net/i?id=29084ff104567ebc13ac631b3514af6b_sr-7011986-images-thumbs&n=13",
         "https://static9.tgstat.ru/channels/_100/ef/ef2a57a48d7bf0635058d0531200a06d.jpg",
@@ -17,33 +16,4 @@ class FakeLinks {
         "https://sun1-83.userapi.com/s/v1/ig2/BzbMhQ2x7Z0ynyKAK2PSVFwvWk7kvERjO44j1-ysYeTlbJnUzIfmaHhGex_L_yRoti7yFcm2ZSO1-X6nO8QKGOw_.jpg?size=200x200&quality=96&crop=163,1,873,873&ava=1",
         "https://i.pinimg.com/280x280_RS/d0/81/f3/d081f3f6d78d8e49b982e85dac4eebce.jpg"
     )
-
-    fun getPersonList(): List<Account> {
-        var counter = 0
-        val list = mutableListOf<Account>()
-        for (i in 1..40) {
-            if (counter < 9) {
-                list.add(
-                    Account(
-                        id = i,
-                        name = faker.name().fullName(),
-                        isSubscribe = false,
-                        avatarUrl = photoUrl[counter]
-                    )
-                )
-                counter++
-            } else {
-                list.add(
-                    Account(
-                        id = i,
-                        name = faker.name().fullName(),
-                        isSubscribe = false,
-                        avatarUrl = photoUrl[counter]
-                    )
-                )
-                counter = 0
-            }
-        }
-        return list
-    }
 }
