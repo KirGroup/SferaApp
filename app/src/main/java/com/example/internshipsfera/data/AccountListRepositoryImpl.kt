@@ -19,22 +19,13 @@ object AccountListRepositoryImpl: AccountListRepository {
             if (counter < 9) {
                 addAccount(
                     Account(
-                        id = i,
-                        name = fakeList.faker.name().fullName(),
-                        isSubscribe = false,
-                        avatarUrl = fakeList.photoUrl[counter]
-                    )
-                )
+                        id = i, name = fakeList.faker.name().fullName(), isSubscribe = false,
+                        avatarUrl = fakeList.photoUrl[counter]))
                 counter++
             } else {
-                addAccount(
-                    Account(
-                        id = i,
-                        name = fakeList.faker.name().fullName(),
-                        isSubscribe = false,
-                        avatarUrl = fakeList.photoUrl[counter]
-                    )
-                )
+                addAccount(Account(
+                        id = i, name = fakeList.faker.name().fullName(),
+                        isSubscribe = false, avatarUrl = fakeList.photoUrl[counter]))
                 counter = 0
             }
         }

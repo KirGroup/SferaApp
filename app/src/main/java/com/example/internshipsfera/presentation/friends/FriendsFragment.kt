@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.FragmentFriendsBinding
 import com.example.internshipsfera.presentation.friends.adapter.FriendsAdapter
 
@@ -27,7 +26,7 @@ class FriendsFragment: Fragment() {
 
         friendsViewModel = ViewModelProvider(this)[FriendsViewModel::class.java]
         friendsViewModel.accountList.observe(viewLifecycleOwner){
-            friendsAdapter.accountList = it
+            friendsAdapter.submitList(it)
         }
 
         val rcFriend = binding.rcFriends
@@ -36,17 +35,11 @@ class FriendsFragment: Fragment() {
         rcFriend.layoutManager = layoutManager
         rcFriend.adapter = friendsAdapter
 
-        friendsAdapter.onInterfaceItemClickListener = object: FriendsAdapter.OnInterfaceItemClickListener{
-            override fun onFunItemClick(account: Account) {
-                friendsViewModel.changeEnableState(account)
-            }
-        }
+        friendsAdapter.onInterfaceItemClickListener = {friendsViewModel.changeEnableState(it)}
 
         binding.toolBarFriends.setNavigationOnClickListener {
             requireActivity().onBackPressed()
         }
-
         return binding.root
     }
-
 }

@@ -1,10 +1,8 @@
 package com.example.internshipsfera.presentation.friends.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.internshipsfera.R
 import com.example.internshipsfera.data.Account
@@ -13,16 +11,9 @@ import com.example.internshipsfera.presentation.friends.adapter.diff.FriendsList
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class FriendsAdapter(private val context: Context): ListAdapterCards
-<Account, FriendsAdapter.FriendItemHolder>(FriendsListDiffCallBack()){
+<Account, FriendItemHolder>(FriendsListDiffCallBack()){
 
-    var onInterfaceItemClickListener: OnInterfaceItemClickListener? = null
-
-    var accountList = listOf<Account>()
-        @SuppressLint("NotifyDataSetChanged")
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    var onInterfaceItemClickListener: ((Account)->Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendItemHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -30,9 +21,8 @@ class FriendsAdapter(private val context: Context): ListAdapterCards
         return FriendItemHolder(binding)
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    override fun onBindViewHolder(holder: FriendItemHolder, position: Int) {
-        val account = accountList[position]
+    override fun onBindViewHolder(holder: FriendItemHolder, position: Int, payloads: MutableList<Any>) {
+        val account = getItem(position)
 
         holder.tvName.text = account.name
         if (account.isSubscribe) {
@@ -49,27 +39,7 @@ class FriendsAdapter(private val context: Context): ListAdapterCards
             .into(holder.imageItem)
 
         holder.btnSubscribe.setOnClickListener {
-            onInterfaceItemClickListener?.onFunItemClick(account)
+            onInterfaceItemClickListener?.invoke(account)
         }
     }
-
-    override fun getItemCount(): Int {
-        return accountList.size
-    }
-
-    open class FriendItemHolder(binding: ItemFriendsBinding): RecyclerView.ViewHolder(binding.root){
-        val imageItem = binding.imageItemFriend
-        val tvName = binding.tvNameFriend
-        val btnSubscribe = binding.btnSubscribe
-    }
-
-    interface OnInterfaceItemClickListener {
-        fun onFunItemClick(account: Account)
-    }
-
-//    private var itemClickListener: ((Account) -> Unit)? = null
-//
-//    fun callBackSetItem(listener: (Account) -> Unit) {
-//        itemClickListener = listener
-//    }
 }

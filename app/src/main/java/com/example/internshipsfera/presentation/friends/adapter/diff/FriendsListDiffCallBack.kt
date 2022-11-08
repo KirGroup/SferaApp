@@ -11,4 +11,8 @@ class FriendsListDiffCallBack: DiffUtil.ItemCallback<Account>(){
     override fun areContentsTheSame(oldItem: Account, newItem: Account): Boolean {
         return oldItem==newItem
     }
+
+    override fun getChangePayload(oldItem: Account, newItem: Account): Any? {
+        return if (oldItem.isSubscribe != newItem.isSubscribe) true else null
+    }
 }
