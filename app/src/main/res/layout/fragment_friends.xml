@@ -19,12 +19,10 @@
         app:titleTextColor="@color/contents87"
         app:titleTextAppearance="@style/HeadlinesText"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rc_friends"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:overScrollMode="never"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_friends"/>
+        android:layout_height="match_parent"/>
+
+
 </LinearLayout>

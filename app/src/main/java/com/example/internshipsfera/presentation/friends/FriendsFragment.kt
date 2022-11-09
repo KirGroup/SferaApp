@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager.widget.PagerAdapter
 import com.example.internshipsfera.databinding.FragmentFriendsBinding
 import com.example.internshipsfera.presentation.friends.adapter.FriendsAdapter
+import com.example.internshipsfera.presentation.friends.pager2.SubscribersPagerAdapter
 
 class FriendsFragment: Fragment() {
 
@@ -25,17 +27,19 @@ class FriendsFragment: Fragment() {
         binding = FragmentFriendsBinding.inflate(inflater, container, false)
 
         friendsViewModel = ViewModelProvider(this)[FriendsViewModel::class.java]
-        friendsViewModel.accountList.observe(viewLifecycleOwner){
-            friendsAdapter.submitList(it)
-        }
+//        friendsViewModel.accountList.observe(viewLifecycleOwner){
+//            friendsAdapter.submitList(it)
+//        }
 
-        val rcFriend = binding.rcFriends
-        friendsAdapter = FriendsAdapter(requireContext())
-        val layoutManager = LinearLayoutManager(requireContext())
-        rcFriend.layoutManager = layoutManager
-        rcFriend.adapter = friendsAdapter
+        binding.viewPager2.adapter = SubscribersPagerAdapter()
 
-        friendsAdapter.onInterfaceItemClickListener = {friendsViewModel.changeEnableState(it)}
+//        val rcFriend = binding.rcFriends
+//        friendsAdapter = FriendsAdapter(requireContext())
+//        val layoutManager = LinearLayoutManager(requireContext())
+//        rcFriend.layoutManager = layoutManager
+//        rcFriend.adapter = friendsAdapter
+//
+//        friendsAdapter.onInterfaceItemClickListener = {friendsViewModel.changeEnableState(it)}
 
         binding.toolBarFriends.setNavigationOnClickListener {
             requireActivity().onBackPressed()

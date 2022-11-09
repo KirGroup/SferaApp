@@ -13,6 +13,6 @@ class FriendsListDiffCallBack: DiffUtil.ItemCallback<Account>(){
     }
 
     override fun getChangePayload(oldItem: Account, newItem: Account): Any? {
-        return if (oldItem.isSubscribe != newItem.isSubscribe) true else null
+        return oldItem.isSubscribe != newItem.isSubscribe
     }
 }

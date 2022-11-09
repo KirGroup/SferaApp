@@ -32,7 +32,6 @@ object AccountListRepositoryImpl: AccountListRepository {
     }
 
     override fun addAccount(account: Account) {
-        if(account.id == Account.UNDEFINED_ID) account.id = autoIncrementedId++
         accountList.add(account)
         updateList()
     }

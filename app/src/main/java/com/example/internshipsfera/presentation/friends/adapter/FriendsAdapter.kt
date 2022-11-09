@@ -21,7 +21,7 @@ class FriendsAdapter(private val context: Context): ListAdapterCards
         return FriendItemHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FriendItemHolder, position: Int, payloads: MutableList<Any>) {
+    override fun onBindViewHolder(holder: FriendItemHolder, position: Int) {
         val account = getItem(position)
 
         holder.tvName.text = account.name
