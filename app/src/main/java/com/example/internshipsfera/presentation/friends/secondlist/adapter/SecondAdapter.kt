@@ -11,17 +11,17 @@ import com.example.internshipsfera.presentation.friends.firstlist.adapter.diff.S
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
 class SecondAdapter(private val context: Context): ListAdapterCards
-<Account, FirstItemHolder>(SecondListDiffCallBack()){
+<Account, CommonItemHolder>(SecondListDiffCallBack()){
 
     var onInterfaceItemClickListener: ((Account)->Unit)? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FirstItemHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonItemHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemFriendsBinding.inflate(inflater, parent, false)
-        return FirstItemHolder(binding)
+        return CommonItemHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FirstItemHolder, position: Int) {
+    override fun onBindViewHolder(holder: CommonItemHolder, position: Int) {
         val account = getItem(position)
 
         holder.tvName.text = account.name

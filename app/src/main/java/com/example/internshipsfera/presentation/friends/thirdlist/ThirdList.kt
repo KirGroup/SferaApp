@@ -7,29 +7,29 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.internshipsfera.databinding.ItemPagerThirdBinding
+import com.example.internshipsfera.databinding.ItemPagerBinding
 import com.example.internshipsfera.presentation.friends.FriendsViewModel
-import com.example.internshipsfera.presentation.friends.firstlist.adapter.FirstAdapter
+import com.example.internshipsfera.presentation.friends.fragmentadapter.CommonFragmentAdapter
 
 class ThirdList : Fragment() {
 
-    private lateinit var binding: ItemPagerThirdBinding
-    private lateinit var friendsAdapter: FirstAdapter
+    private lateinit var binding: ItemPagerBinding
+    private lateinit var friendsAdapter: CommonFragmentAdapter
     lateinit var friendsViewModel: FriendsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = ItemPagerThirdBinding.inflate(inflater, container, false)
+        binding = ItemPagerBinding.inflate(inflater, container, false)
         friendsViewModel = ViewModelProvider(requireParentFragment())[FriendsViewModel::class.java]
 
         val rcFriend = binding.rcFriends
-        friendsAdapter = FirstAdapter(requireContext())
+        friendsAdapter = CommonFragmentAdapter(requireContext())
         val layoutManager = LinearLayoutManager(requireContext())
         rcFriend.layoutManager = layoutManager
         rcFriend.adapter = friendsAdapter
-        friendsViewModel.getFilteredAccountList().observe(viewLifecycleOwner){
+        friendsViewModel.filteredAccountList.observe(viewLifecycleOwner){
             friendsAdapter.submitList(it)
         }
 

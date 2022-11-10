@@ -9,7 +9,7 @@
         android:id="@+id/firstFragment"
         android:name="com.example.internshipsfera.presentation.friends.firstlist.FirstList"
         android:label="fragment_first"
-        tools:layout="@layout/item_pager_first" />
+        tools:layout="@layout/item_pager" />
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.internshipsfera.presentation.friends.secondlist.SecondList"

@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/outline</item>
         <item name="colorPrimaryVariant">@color/outline</item>
         <item name="colorOnPrimary">@color/background</item>
-
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/contents87</item>
         <item name="colorSecondaryVariant">@color/outline</item>
@@ -13,8 +12,7 @@
         <item name="colorOnSurface">@color/contents87</item>
 
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/contents87</item>
-        <item name="android:actionMenuTextColor">@color/contents87</item>
+        <item name="android:statusBarColor">@color/background</item>
         <!-- Customize your theme here. -->
 
         <item name="colorAccent">@color/white</item>
