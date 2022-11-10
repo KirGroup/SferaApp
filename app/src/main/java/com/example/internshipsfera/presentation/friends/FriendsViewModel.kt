@@ -1,9 +1,6 @@
 package com.example.internshipsfera.presentation.friends
 
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.example.internshipsfera.data.AccountListRepositoryImpl
 import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.domain.usecase.AddAccountUseCase
@@ -20,7 +17,14 @@ class FriendsViewModel: ViewModel() {
 
     val allAccountList = getAccountUseCase.getAccountList()
 
-    val filteredAccountList: MutableLiveData<List<Account>> = MediatorLiveData().apply{  }//во вех фрагментах
+    val filteredAccountList: MediatorLiveData<List<Account>>  = MediatorLiveData<List<Account>>()
+
+    fun getFilteredAccountList(): LiveData<List<Account>> {
+         filteredAccountList.addSource(allAccountList, Observer {
+            filteredAccountList.value = it
+        })
+        return filteredAccountList
+    }
 
     fun changeEnableState(account: Account) {
         val newItem = account.copy(isSubscribe = !account.isSubscribe)

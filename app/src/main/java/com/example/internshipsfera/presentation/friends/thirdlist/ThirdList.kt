@@ -29,10 +29,7 @@ class ThirdList : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         rcFriend.layoutManager = layoutManager
         rcFriend.adapter = friendsAdapter
-        friendsViewModel.filteredAccountList.observe(viewLifecycleOwner){
-//            it.filter {
-//                it-> it.isSubscribe //фильтровать по задаче
-//            }
+        friendsViewModel.getFilteredAccountList().observe(viewLifecycleOwner){
             friendsAdapter.submitList(it)
         }
 

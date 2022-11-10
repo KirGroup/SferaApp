@@ -80,4 +80,10 @@
         <item name="backgroundTint">@color/contents87</item>
     </style>
 
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/contents87</item>
+        <item name="android:textColorSecondary">@color/contents87</item>
+        <item name="android:textColor">@color/contents87</item>
+    </style>`
+
 </resources>

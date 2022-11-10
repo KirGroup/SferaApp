@@ -9,6 +9,7 @@
     tools:context=".presentation.friends.FriendsFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
+        style="@style/ToolBarButton"
         android:id="@+id/tool_bar_friends"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

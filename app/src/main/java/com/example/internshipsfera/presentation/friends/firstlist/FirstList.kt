@@ -42,10 +42,7 @@ class FirstList : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        friendsViewModel.filteredAccountList.observe(viewLifecycleOwner){
-//            it.filter {
-//                it-> it.isSubscribe //фильтровать по задаче
-//            }
+        friendsViewModel.getFilteredAccountList().observe(viewLifecycleOwner){
             friendsAdapter.submitList(it)
         }
         super.onViewCreated(view, savedInstanceState)

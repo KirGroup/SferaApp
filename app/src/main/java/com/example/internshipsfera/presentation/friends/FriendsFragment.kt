@@ -20,7 +20,7 @@ class FriendsFragment: Fragment() {
     private lateinit var binding: FragmentFriendsBinding
 
     lateinit var friendsViewModel: FriendsViewModel
-//    lateinit var listAllItems: List<Account>
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,9 +29,6 @@ class FriendsFragment: Fragment() {
         binding = FragmentFriendsBinding.inflate(inflater, container, false)
 
         friendsViewModel = ViewModelProvider(this)[FriendsViewModel::class.java]
-//        friendsViewModel.allAccountList.observe(viewLifecycleOwner){
-//            listAllItems = it
-//        }
         val tabLayout = binding.tabLayout
         val viewPager = binding.viewPager2
 
