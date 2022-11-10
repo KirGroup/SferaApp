@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.adapter
+package com.example.internshipsfera.presentation.friends.firstlist.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,21 +7,21 @@ import com.bumptech.glide.Glide
 import com.example.internshipsfera.R
 import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.ItemFriendsBinding
-import com.example.internshipsfera.presentation.friends.adapter.diff.FriendsListDiffCallBack
+import com.example.internshipsfera.presentation.friends.firstlist.adapter.diff.SecondListDiffCallBack
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
-class FriendsAdapter(private val context: Context): ListAdapterCards
-<Account, FriendItemHolder>(FriendsListDiffCallBack()){
+class ThirdAdapter(private val context: Context): ListAdapterCards
+<Account, FirstItemHolder>(SecondListDiffCallBack()){
 
     var onInterfaceItemClickListener: ((Account)->Unit)? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendItemHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FirstItemHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemFriendsBinding.inflate(inflater, parent, false)
-        return FriendItemHolder(binding)
+        return FirstItemHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: FriendItemHolder, position: Int) {
+    override fun onBindViewHolder(holder: FirstItemHolder, position: Int) {
         val account = getItem(position)
 
         holder.tvName.text = account.name

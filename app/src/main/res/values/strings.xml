@@ -20,4 +20,7 @@
     <string name="edit_text">Edit text</string>
     <string name="subscribe">Subscribe</string>
     <string name="unsubscribe">Unsubscribe</string>
+    <string name="subscribers">Subscribers</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="mutually">Mutually</string>
 </resources>

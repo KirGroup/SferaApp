@@ -11,8 +11,6 @@ object AccountListRepositoryImpl: AccountListRepository {
 
     private val fakeList = FakeLinks()
 
-    private var autoIncrementedId = 0
-
     init {
         var counter = 0
         for (i in 0 until 40){
@@ -29,6 +27,7 @@ object AccountListRepositoryImpl: AccountListRepository {
                 counter = 0
             }
         }
+        updateList()
     }
 
     override fun addAccount(account: Account) {
