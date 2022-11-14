@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.firstlist.adapter
+package com.example.internshipsfera.presentation.friends.subscriberslists.fragmentadapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,12 @@ import com.bumptech.glide.Glide
 import com.example.internshipsfera.R
 import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.ItemFriendsBinding
-import com.example.internshipsfera.presentation.friends.firstlist.adapter.diff.SecondListDiffCallBack
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.subscribersadapter.CommonItemHolder
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.subscribersadapter.diff.DiffCallBack
 import androidx.recyclerview.widget.ListAdapter as ListAdapterCards
 
-class SecondAdapter(private val context: Context): ListAdapterCards
-<Account, CommonItemHolder>(SecondListDiffCallBack()){
+class CommonFragmentAdapter(private val context: Context): ListAdapterCards
+<Account, CommonItemHolder>(DiffCallBack()){
 
     var onInterfaceItemClickListener: ((Account)->Unit)? = null
 

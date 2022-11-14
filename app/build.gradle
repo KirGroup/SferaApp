@@ -61,8 +61,21 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     //endregion Glide
     //region Viewpager2
-    implementation "androidx.viewpager2:viewpager2:1.0.0-alpha01"
+    implementation "androidx.viewpager2:viewpager2:1.1.0-beta01"
     //endregion Viewpager2
+
+
+    //region Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
+    implementation "com.squareup.okhttp3:okhttp:3.14.9"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+    //endregion
+
+    //region RxJava
+
+    //endregion
 
     //region
     //endregion

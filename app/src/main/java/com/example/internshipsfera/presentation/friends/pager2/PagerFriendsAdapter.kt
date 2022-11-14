@@ -3,9 +3,9 @@ package com.example.internshipsfera.presentation.friends.pager2
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.internshipsfera.presentation.friends.FriendsFragment
-import com.example.internshipsfera.presentation.friends.firstlist.FirstList
-import com.example.internshipsfera.presentation.friends.secondlist.SecondList
-import com.example.internshipsfera.presentation.friends.thirdlist.ThirdList
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.firstlist.FirstList
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.secondlist.SecondList
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.thirdlist.ThirdList
 
 class PagerFriendsAdapter(fragment: FriendsFragment) : FragmentStateAdapter(fragment){
     override fun getItemCount(): Int {

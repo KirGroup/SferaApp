@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.fragmentadapter.diff
+package com.example.internshipsfera.presentation.friends.pager2.subscriberslists.subscribersadapter.diff
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.internshipsfera.data.Account

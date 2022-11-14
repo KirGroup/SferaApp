@@ -80,10 +80,13 @@
         <item name="backgroundTint">@color/contents87</item>
     </style>
 
-    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:textColorPrimary">@color/contents87</item>
-        <item name="android:textColorSecondary">@color/contents87</item>
+    <style name="myCustomMenuTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
         <item name="android:textColor">@color/contents87</item>
-    </style>`
+        <item name="android:statusBarColor">@color/contents87</item>
+        <item name="colorOnSecondary">@color/contents87</item>
+        <item name="colorOnPrimary">@color/contents87</item>
+
+
+    </style>
 
 </resources>

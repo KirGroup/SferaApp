@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.thirdlist
+package com.example.internshipsfera.presentation.friends.pager2.subscriberslists.thirdlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.internshipsfera.databinding.ItemPagerBinding
 import com.example.internshipsfera.presentation.friends.FriendsViewModel
-import com.example.internshipsfera.presentation.friends.fragmentadapter.CommonFragmentAdapter
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.subscribersadapter.CommonFragmentAdapter
 
 class ThirdList : Fragment() {
 

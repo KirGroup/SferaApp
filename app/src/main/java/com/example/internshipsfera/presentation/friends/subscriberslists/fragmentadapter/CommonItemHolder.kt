@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.firstlist.adapter
+package com.example.internshipsfera.presentation.friends.subscriberslists.firstlist.adapter
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.internshipsfera.databinding.ItemFriendsBinding

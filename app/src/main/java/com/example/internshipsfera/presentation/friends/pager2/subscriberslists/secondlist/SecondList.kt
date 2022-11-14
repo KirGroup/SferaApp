@@ -1,4 +1,4 @@
-package com.example.internshipsfera.presentation.friends.firstlist
+package com.example.internshipsfera.presentation.friends.pager2.subscriberslists.secondlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.internshipsfera.databinding.ItemPagerBinding
 import com.example.internshipsfera.presentation.friends.FriendsViewModel
-import com.example.internshipsfera.presentation.friends.fragmentadapter.CommonFragmentAdapter
+import com.example.internshipsfera.presentation.friends.pager2.subscriberslists.subscribersadapter.CommonFragmentAdapter
 
-class FirstList : Fragment() {
+class SecondList : Fragment() {
 
     private lateinit var binding: ItemPagerBinding
     private lateinit var friendsAdapter: CommonFragmentAdapter
@@ -29,21 +29,11 @@ class FirstList : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         rcFriend.layoutManager = layoutManager
         rcFriend.adapter = friendsAdapter
-//        friendsViewModel.filteredAccountList.observe(viewLifecycleOwner){
-////            it.filter {
-////                it-> it.isSubscribe //фильтровать по задаче
-////            }
-//            friendsAdapter.submitList(it)
-//        }
+        friendsViewModel.filteredAccountList.observe(viewLifecycleOwner){
+            friendsAdapter.submitList(it)
+        }
 
         friendsAdapter.onInterfaceItemClickListener = {friendsViewModel.changeEnableState(it)}
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        friendsViewModel.getFilteredAccountList().observe(viewLifecycleOwner){
-            friendsAdapter.submitList(it)
-        }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

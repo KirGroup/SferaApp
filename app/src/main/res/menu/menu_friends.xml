@@ -7,6 +7,6 @@
         android:icon="@drawable/ic_search"
         android:title="search"
         app:showAsAction="ifRoom|collapseActionView"
-
+        app:itemTextColor="@color/contents87"
     app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>

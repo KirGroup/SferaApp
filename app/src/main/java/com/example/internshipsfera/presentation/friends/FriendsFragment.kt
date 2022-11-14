@@ -1,6 +1,5 @@
 package com.example.internshipsfera.presentation.friends
 
-import android.app.ActionBar
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.*
@@ -10,7 +9,6 @@ import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.internshipsfera.R
-import com.example.internshipsfera.data.Account
 import com.example.internshipsfera.databinding.FragmentFriendsBinding
 import com.example.internshipsfera.presentation.friends.pager2.PagerFriendsAdapter
 import com.google.android.material.tabs.TabLayoutMediator
@@ -78,6 +76,5 @@ class FriendsFragment: Fragment() {
                 return false
             }
         })
-
     }
 }
